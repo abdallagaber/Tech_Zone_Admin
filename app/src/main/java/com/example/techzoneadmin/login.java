@@ -40,7 +40,7 @@ public class login extends AppCompatActivity {
                     Toast.makeText(login.this, "please enter your username and Password",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                     databaseReference.child("Adimns").addListenerForSingleValueEvent(new ValueEventListener() {
+                     databaseReference.child("Admins").addListenerForSingleValueEvent(new ValueEventListener() {
                          @Override
                          public void onDataChange(@NonNull DataSnapshot snapshot) {
                              if(snapshot.hasChild(usernametext)){
