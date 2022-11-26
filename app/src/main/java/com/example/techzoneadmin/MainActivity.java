@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button addProduct;
-    private Button editProduct;
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +22,13 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
+        button = findViewById(R.id.btnEditProduct);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,EditProduct.class));
+            }
+        });
 
     }
 }
