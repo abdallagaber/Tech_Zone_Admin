@@ -51,8 +51,8 @@
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="200dp"
-                    android:layout_height="121dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Welcome\nAdmin"
                     android:textAlignment="center"
@@ -61,10 +61,10 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.573"
+                    app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="@+id/imageView6"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.442" />
+                    app:layout_constraintVertical_bias="0.421" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -92,9 +92,9 @@
                     android:id="@+id/textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_margin="32dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="32dp"
                     android:background="@drawable/grey_edittext_background"
                     android:ems="10"
                     android:hint="Password"

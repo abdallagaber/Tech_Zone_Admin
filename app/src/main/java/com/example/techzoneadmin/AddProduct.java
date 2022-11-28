@@ -34,7 +34,7 @@ import java.util.HashMap;
 
 public class AddProduct extends AppCompatActivity {
 //    define variables
-    private String[] categories = {"PC","Laptop","Graphic Card"};
+    private String[] categories = {"PC","Laptop","PC Components","Accessories"};
     private ArrayAdapter<String> items;
     private String category,description,price,name,saveCurrentDate,saveCurrentTime,productRandomKey,downloadImageUrl;
     private AutoCompleteTextView categoryItems;
