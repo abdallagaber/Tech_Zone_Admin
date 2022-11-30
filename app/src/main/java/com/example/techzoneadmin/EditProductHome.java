@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
@@ -66,7 +67,7 @@ public class EditProductHome extends AppCompatActivity {
 
         recyclerview = findViewById(R.id.lap);
         recyclerview.setHasFixedSize(true);
-        layoutmanager = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL,false);
+        layoutmanager = new LinearLayoutManager(this);
         recyclerview.setLayoutManager(layoutmanager);
 
     }

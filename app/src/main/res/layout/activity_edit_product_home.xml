@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/white_abstract_wallpaper_23_2148830026"
     tools:context=".EditProductHome">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lap"
