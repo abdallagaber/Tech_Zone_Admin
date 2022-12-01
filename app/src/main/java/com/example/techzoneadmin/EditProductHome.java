@@ -91,7 +91,7 @@ public class EditProductHome extends AppCompatActivity {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(EditProductHome.this,EditProduct.class);
+                        Intent intent = new Intent(EditProductHome.this,EditProduct1.class);
                         intent.putExtra("id",model.getId());
                         startActivity(intent);
                     }

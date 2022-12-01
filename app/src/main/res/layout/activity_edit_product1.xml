@@ -15,14 +15,15 @@
             android:id="@+id/toolbarl"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@drawable/orange2"
+            android:background="@drawable/blue_background"
             android:padding="10dp">
+
             <ImageButton
                 android:id="@+id/backBtn"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@null"
-                android:src="@drawable/ic_back_ios_24"/>
+                android:src="@drawable/ic_back_ios_24" />
 
 
             <TextView
@@ -34,23 +35,7 @@
                 android:text="Product Details"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
-
-            <ImageButton
-                android:id="@+id/dBTn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:background="#00FFFFFF"
-                app:srcCompat="@drawable/delet_white" />
-
-            <ImageButton
-                android:id="@+id/editBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/dBTn"
-                android:background="#00FFFFFF"
-                app:srcCompat="@drawable/edit_white" />
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -60,10 +45,10 @@
             android:layout_height="120dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:background="@drawable/orange2"
             android:adjustViewBounds="true"
+            android:background="@drawable/blue_background"
             android:padding="5dp"
-            android:src="@drawable/add_shopping_white"/>
+            android:src="@drawable/add_shopping_white" />
 
 
         <LinearLayout
@@ -74,69 +59,97 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <TextView
-                android:id="@+id/discountNote"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/colooooor"
-                android:padding="5dp"
-                android:textSize="10sp"
-                android:paddingEnd="5dp"
-                android:text="10% off"
-                android:textColor="@drawable/orange2" />
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="The Product Title"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="The Product Description"
-                android:textColor="#000000"/>
-            <TextView
-                android:id="@+id/category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Category"
-                android:textColor="#000000"/>
-            <TextView
-                android:id="@+id/quantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Quantity"
-                android:textColor="#000000"/>
-            <RelativeLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-                <TextView
-                    android:id="@+id/discountPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$10"
-                    android:layout_marginEnd="10dp"
-                    android:textColor="#707175"/>
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/originalPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$15"
-                    android:layout_toEndOf="@id/discountPrice"
-                    android:textColor="#707175"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            </RelativeLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Select Category">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <EditText
+                        android:id="@+id/editTextProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/textInputLayout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/edit_text_background"
+                        android:hint="Product Name..."
+                        android:inputType="text"
+                        android:paddingLeft="10dp" />
+
+                    <EditText
+                        android:id="@+id/editTextProductDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_below="@+id/editTextProductName"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/edit_text_background"
+                        android:gravity="top"
+                        android:hint="Product Description..."
+                        android:inputType="textMultiLine"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/editTextProductPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/editTextProductDesc"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/edit_text_background"
+                        android:hint="Product Price..."
+                        android:inputType="number"
+                        android:paddingLeft="10dp" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editTextProductPrice"
+                        android:layout_marginTop="40dp"
+                        android:text="Edit Product"
+                        android:layout_centerHorizontal="true"/>
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editTextProductPrice"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="104dp"
+                        android:layout_marginBottom="50dp"
+                        android:text="Delete Product"
+                        tools:ignore="DuplicateIds" />
+                </RelativeLayout>
+            </ScrollView>
 
         </LinearLayout>
 
