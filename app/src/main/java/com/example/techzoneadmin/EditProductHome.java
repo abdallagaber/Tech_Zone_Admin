@@ -83,7 +83,7 @@ public class EditProductHome extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull product model) {
 
                 holder.txtProductName.setText(model.getName());
-                holder.txtProductPrice.setText("EGP "+model.getPrice());
+                holder.txtProductPrice.setText(model.getPrice()+" LE");
                 Picasso.get().load(model.getImage()).into(holder.productImage);
 
 
@@ -91,7 +91,7 @@ public class EditProductHome extends AppCompatActivity {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(EditProductHome.this,EditProduct1.class);
+                        Intent intent = new Intent(EditProductHome.this,EditProduct.class);
                         intent.putExtra("id",model.getId());
                         startActivity(intent);
                     }
