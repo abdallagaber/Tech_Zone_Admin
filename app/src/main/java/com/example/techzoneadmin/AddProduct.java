@@ -58,7 +58,7 @@ public class AddProduct extends AppCompatActivity {
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
         // Category Box
-        categoryItems = findViewById(R.id.autoCompleteTextView);
+        categoryItems = findViewById(R.id.addProductCategory);
         items = new ArrayAdapter<String>(this,R.layout.list_item, categories);
         categoryItems.setAdapter(items);
         categoryItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -71,9 +71,9 @@ public class AddProduct extends AppCompatActivity {
 
         // Product Details
         productImage = findViewById(R.id.selectImage);
-        productName = findViewById(R.id.editTextProductName);
-        productDesc = findViewById(R.id.editTextProductDesc);
-        productPrice = findViewById(R.id.editTextProductPrice);
+        productName = findViewById(R.id.addProductName);
+        productDesc = findViewById(R.id.addProductDesc);
+        productPrice = findViewById(R.id.addProductPrice);
 
         // Select Product Image
         productImage.setOnClickListener(new View.OnClickListener() {

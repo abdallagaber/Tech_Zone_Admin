@@ -35,7 +35,7 @@
                 android:layout_below="@+id/textView3">
 
                 <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
+                    android:id="@+id/addProductCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"/>
@@ -52,7 +52,7 @@
                 android:layout_below="@+id/textInputLayout"/>
 
             <EditText
-                android:id="@+id/editTextProductName"
+                android:id="@+id/addProductName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="text"
@@ -65,11 +65,11 @@
                 android:background="@drawable/edit_text_background"
                 android:hint="Product Name..." />
             <EditText
-                android:id="@+id/editTextProductDesc"
+                android:id="@+id/addProductDesc"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:inputType="textMultiLine"
-                android:layout_below="@+id/editTextProductName"
+                android:layout_below="@+id/addProductName"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
@@ -78,11 +78,11 @@
                 android:background="@drawable/edit_text_background"
                 android:hint="Product Description..." />
             <EditText
-                android:id="@+id/editTextProductPrice"
+                android:id="@+id/addProductPrice"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="number"
-                android:layout_below="@+id/editTextProductDesc"
+                android:layout_below="@+id/addProductDesc"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="Add Product"
-                android:layout_below="@+id/editTextProductPrice"/>
+                android:layout_below="@+id/addProductPrice"/>
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
